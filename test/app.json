@@ -1,11 +1,6 @@
 {
     "name": "Stratis AI",
     "env": {},
-    "buildpacks": [
-      {
-        "url": "heroku/nodejs"
-      }
-    ],
     "addons": [],
     "environments": {
       "review": {

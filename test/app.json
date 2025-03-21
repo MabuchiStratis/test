@@ -2,9 +2,14 @@
     "name": "Stratis AI",
     "env": {},
     "addons": [],
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ],
     "environments": {
       "review": {
-        "addons": ["logtail:free", "heroku-postgresql:hobby-dev"]
+        "addons": ["logtail:free", "heroku-postgresql"]
       }
     }
   }

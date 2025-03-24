@@ -1,16 +1,21 @@
 {
-    "name": "Stratis AI",
-    "env": {},
-    "buildpacks": [
-      {
-        "url": "heroku/nodejs"
-      }
-    ],
-    "addons": [],
-    "environments": {
-      "review": {
-        "addons": ["logtail:free", "heroku-postgresql:hobby-dev"]
-      }
+  "name": "test_app",
+  "scripts": {
+    "postdeploy": "yarn post:deploy"
+  },
+  "env": {},
+  "buildpacks": [
+    {
+      "url": "https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku-community/multi-procfile.tgz"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "addons": [],
+  "environments": {
+    "review": {
+      "addons": ["logtail:free", "heroku-postgresql:mini"]
     }
   }
-  
+}
